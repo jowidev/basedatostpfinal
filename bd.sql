@@ -22,7 +22,7 @@ CREATE TABLE cliente (
 
 CREATE TABLE factura (
     idfactura INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    monto VARCHAR (255),
+    monto INT (255),
     idpedido INT,
     FOREIGN KEY (idpedido) REFERENCES pedido (idpedido)
 );
@@ -33,6 +33,13 @@ CREATE TABLE pedido (
     idcliente INT,
     FOREIGN KEY (idcliente) REFERENCES cliente(idcliente)
 );
+
+CREATE TABLE pago (
+idpago INT
+);
+
+
+
 
 
 INSERT INTO cliente (nombrecliente, apellidocliente, dnicliente, direccioncliente, emailcliente) VALUES ( “juan”, “gonzales”, “89027947”, "calle 1", “Juangonzalesmail”);
