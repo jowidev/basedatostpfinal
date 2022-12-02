@@ -1,10 +1,8 @@
---Crear una base de datos con el nombre BD + Nombre  y sus correspondientes Tablas o Entidades en un script con formato sql.
-
 DROP DATABASE IF EXISTS indumentaria;
 
 CREATE DATABASE indumentaria;
 
---Escribir las sentencias SQL para la creación de la Base de Datos y sus tablas (basadas en el desarrollo del modelo lógico)
+USE indumentaria;
 
 CREATE TABLE productos (
     idproducto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -19,7 +17,7 @@ CREATE TABLE cliente (
     nombrecliente VARCHAR(255) NOT NULL,
     apellidocliente VARCHAR (255),
     dnicliente INT (255) NOT NULL,
-    direccioncliente VARCHAR (255),
+    direccioncliente INT (255),
     emailcliente VARCHAR (255) 
 );
 
@@ -47,28 +45,3 @@ CREATE TABLE factura (
 );
 
 
- 
-
-
-
---Escribir las sentencias SQL para consultar datos de las tablas, 
---junto con la imágen del resultado de la misma. Deben realizar al menos dos consultas de cada uno de los siguientes tipos:
-
-SELECT nombrecliente, apellidocliente FROM cliente WHERE direccioncliente BETWEEN 'calle 2' AND 'calle 3';
-/*
-
-Uso de operadores (LIKE, IS NULL, NOT IN, IN, BETWEEN,)lujan
-Funciones de fechas(Cáceres)
-Agrupación (Group By, Having)(León)
-Ordenamiento (Order By) (Cáceres)
-Campos calculados ó funciones agregadas de dominio (Count, Sum, Max, Min, Avg) (Maxy)
-Inner join (León)
-Subconsultas(Lujan)
-Seleccionar y justificar adecuadamente el uso de:
-Cursores
-Procedimientos Almacenados con y sin parámetros
-Funciones Almacenadas
-Vistas y sus posibles usos (Maxy)
-Creación de usuarios y uso de privilegios
-Triggers.
-*/
